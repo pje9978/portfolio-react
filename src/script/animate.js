@@ -1013,8 +1013,8 @@ export const animate = () => {
     }).progress(1);
     
     ScrollTrigger.create({
-        start: "top top",
-        end: 99,
+        start: "top bottom",
+        end: 99999,
         onUpdate: (self) => {
             self.direction === -1 ? showNav.play() : showNav.reverse()
         }
