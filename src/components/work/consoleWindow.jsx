@@ -7,7 +7,7 @@ function ConsoleWindow({id,title, language, part, percent}) {
             
             <h3 className="before:content-['>'] before:mr-2 opacity-50">language</h3>
             <ul className="flex before:content-['>'] before:mr-2 " >
-                {language.map((lang,index) => (
+                {Object.keys(language).map((lang,index) => (
                     <li key={index} className="mr-2 pacity-100"><h4>{lang}</h4></li>
                 ))}
             </ul>
