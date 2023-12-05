@@ -1,5 +1,5 @@
 function Language({language}) {
-    const keywords = ["html", "css", "scss", "tailwindcss", "javascipt", "react", "notion", "photoshop", "illustrator", "GitHub","firebase","figma"];
+    const keywords = ["html", "css", "scss", "tailwindcss", "javascript", "react", "notion", "photoshop", "illustrator", "GitHub","firebase","figma"];
  
     return ( <>
     
