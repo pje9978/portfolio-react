@@ -1,0 +1,33 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+            
+  .content {@apply flex  relative;}
+  .char-lg { @apply text-lg;}
+  .nav-after {
+  @apply after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-textwhite after:ease-in after:duration-300;
+  }
+  .info_after{
+      @apply after:content-[''] after:absolute after:left-1/2 after:w-[1px] after:h-[2rem] after:bg-white after:top-full after:mt-4;
+  }
+  .hiddenItem {@apply hidden;}
+  h1,h2,h3,h4,h5,p,span{@apply selection:bg-[--primary] selection:text-[--secondary];}
+  .desc {@apply hidden;}
+  .popup {@apply hidden;}
+  .popup-content,.closeBtn{
+      display: none;
+  }
+  .popup-content.active,.closeBtn.active{display: flex;}
+  .swiper-pagination-bullet{@apply  w-full min-h-[30px] text-white/50 bg-transparent opacity-100 rounded-none border-white/60 hover:text-white/60 hover:border-b-2;}
+  .swipter-pagination-bullet.swiper-pagination-bullet-active {@apply  opacity-100 bg-white;}
+  .swiper-pagination-bullet-active{@apply w-full border-b-2 border-white/100 text-white/100 ;}
+  .swiper-pagination-bullet-active:before{@apply content-[""] block absolute border-t-[10px_solid_transparent] border-r-[10px_solid_transparent] border-b-[10px_solid_transparent] border-l-[10px_solid_pink] [transition:all_.5_ease-in-out];}
+  .editor-line {counter-increment: line;}
+  .urlArea a{@apply bg-white overflow-clip text-sm font-medium px-4 py-2 text-gray-900 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700;}
+  .linkArea a{@apply bg-black/80 hover:bg-black/100 text-sm px-4 py-2 inline-flex;}  
+  .output {@apply mb-2;}
+
+}

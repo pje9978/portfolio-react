@@ -1,0 +1,77 @@
+$url : "http://pje9978.ipdisk.co.kr:8000/list/HDD2/portfolio/work/";
+// variables
+$imgPath:"../images/gallery";
+
+// index gallery image url
+$galleryThumbUrls: (
+  thumb-flip-glass,
+  thumb-flip-luster,
+  thumb-ip-jelly,
+  thumb-watch-case,
+  thumb-buds-silicone,
+  thumb-pencil,
+  thumb-flip-pard,
+  thumb-airpod-silicone,
+  thumb-ip-silicone,
+  thumb-buds-jelly
+);
+// img{background: url('../../public/images/capture/web-portfolio/');}
+$galleryDtlUrls: (
+  dtl-flip-glass,
+  dtl-flip-luster,
+  dtl-ip-jelly,
+  dtl-watch-case,
+  dtl-buds-silicone,
+  dtl-pencil,
+  dtl-flip-pard,
+  dtl-airpod-silicone,
+  dtl-ip-silicone,
+  dtl-buds-jelly
+);
+.slide {
+  @each $galleryThumbUrl in $galleryThumbUrls {
+    $i: index($galleryThumbUrls, $galleryThumbUrl);
+    &:nth-child(#{$i}) {
+      .slide__img {
+        background-image: url("#{$imgPath}/#{$galleryThumbUrl}.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+  }
+}
+
+//proj1 images url 
+
+
+#web_plantShop {
+
+  $subpagesURL : "http://pje9978.ipdisk.co.kr:8000/list/HDD2/portfolio-parallax/images/subpages/proj1";
+  
+  $projName : "2304_plant_website";
+  // .macbook .viewport{ background-image: url("#{$subpagesURL}/intro.png");}
+  .phone-display {
+    background: #ff352a;
+    .display-content {
+      margin-top: 16px;
+      // background: url("#{$url}/#{$projName}/images/capture/main-3.png");
+      background-size: cover;
+    }
+  }
+  
+}
+
+#appleRenewal {
+  // $subpagesURL : "http://pje9978.ipdisk.co.kr:8000/list/HDD2/portfolio-parallax/images/proj2";
+  $projName : "2307_Apple_redesign";
+  // .macbook .viewport{ background-image: url("#{$subpagesURL}/desktop.png");}
+  .phone-display {
+    background: #ffffff;
+    .display-content {
+      // margin-top: 16px;
+      // background: url("#{$subpagesURL}/mobile.png");
+      background-size: cover;
+    }
+  } 
+}

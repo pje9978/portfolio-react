@@ -1,0 +1,59 @@
+/* color and position of everthing */
+
+.iammenasco {
+  width: 87%;
+  margin: auto;
+}
+.iam {
+  position: relative;
+  left: 3vw;
+  font-size: 9.6vw;
+  line-height: 16.6vw;
+  float: left;
+  -webkit-transform: rotate(-90deg);
+}
+.i {
+  opacity: 0;
+  color: #30ECDF;
+}
+.am {
+  opacity: 0;
+  color: #5A8F90;
+}
+.menasco {
+  opacity: 0;
+  color: #2FE6DD;
+  font-size: 17vw;
+  line-height: 15vw;
+}
+
+/* animation */
+.i {
+  -webkit-animation: kapow 0s forwards;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-delay: 1.2s;
+  animation: kapow 0s forwards;
+  animation-iteration-count: 1;
+  animation-delay: 1.2s;
+}
+.am {
+  -webkit-animation: kapow 0s forwards;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-delay: 1.5s;
+  animation: kapow 0s forwards;
+  animation-iteration-count: 1;
+  animation-delay: 1.5s;
+}
+.menasco {
+  -webkit-animation: kapow 0s forwards;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-delay: 2.1s;
+  animation: kapow 0s forwards;
+  animation-iteration-count: 1;
+  animation-delay: 2.1s;
+}
+@-webkit-keyframes kapow {
+  100% {
+    opacity: 1;
+  }
+}
