@@ -1,7 +1,7 @@
 
 import { useEffect, useState } from "react";
 import { db } from "../firebase";
-import { collection, getDocs } from "firebase/firestore";
+import { collection, getDocs, orderBy, query, where } from "firebase/firestore";
 import EditorNav from '../components/work/editorNav'
 import HtmlWindow from "../components/work/htmlWindow";
 import ConsoleNav from "../components/work/consoleNav";
@@ -20,22 +20,28 @@ import Loading from "../components/loading";
 
 function Work() {
     const [data, setData] = useState([]);
-    const [loading, setLoding] = useState(true);
+    const [loading, setLoading] = useState(true);
 
     
 
     useEffect(() => {
         const fetchData = async () => {
             // ... try, catch 생략
-            const usersCollectionRef = collection(db, 'database'); // 참조
-            const userSnap = await getDocs(usersCollectionRef); // 데이터 스냅 받아오기 - 비동기처리
-            const data = userSnap.docs.map(doc => ({
-                ...doc.data(),
-                id: doc.id
-            }));
+            const q = query(collection(db, "database"), orderBy('data', 'desc') );
+            getDocs(q).then((querySnapshot) => {
+            let data = []; // 데이터를 저장할 배열
+            querySnapshot.forEach((doc) => {
+                let docData = doc.data(); // 저장된 데이터
+                let docId = doc.id; // 고유 아이디
+                data.push({
+                ...docData,
+                id: docId
+                });
+            });
             setData(data);
-            setLoding(false);
+            setLoading(false);
             return data;
+            });
         }
 
         fetchData();
@@ -77,7 +83,7 @@ function Work() {
                                             <h2 className="hidden">editor</h2>
                                             <EditorNav />
                                             <HtmlWindow title={item.title} subtitle={item.subTitle}/>
-                                            <ConsoleNav />
+                                            <ConsoleNav id={item.id} />
                                             <ConsoleWindow id={item.id} title={item.title} part={item.part} language={item.language} />
                                             <UrlNav id={item.id} index={index} url={item.url} link={item.link} title={item.titile} data={item}/>
                                         </article>
