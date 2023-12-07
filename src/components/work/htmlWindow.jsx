@@ -1,6 +1,6 @@
 function HtmlWindow({subtitle , title}) {
     return ( <>
-        <section className="editorhtml  h-[250px] content__title  p-4 flex flex-col items-start grow w-full bg-bgblack font-[monospace] text-[15px] rounded-[5px]"  data-splitting data-effect1>
+        <section className="editorhtml  h-[250px] content__title  p-4 flex flex-col items-start grow w-full bg-bgblack font-[monospace] text-[15px] rounded-[5px] overflow-y-auto"  data-splitting data-effect1>
             <h2 className="hidden">editoir line</h2>
             <div className="editor-line text-sm m-[2px] text-[rgb(195,215,225)] [content-increment:line] before:content-[counter(line)] before:mr-[15px] ">
                 <span className="element text-[rgb(100,150,250)]">&lt;div className=<span className="quotes text-[rgb(150,150,150)]">"header"</span>&gt;</span>
