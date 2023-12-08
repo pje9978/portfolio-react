@@ -1,7 +1,7 @@
 
 import { useEffect, useState } from "react";
 import { db } from "../firebase";
-import { collection, getDocs, orderBy, query, where } from "firebase/firestore";
+import { collection, getDocs, orderBy, query } from "firebase/firestore";
 import EditorNav from '../components/work/editorNav'
 import HtmlWindow from "../components/work/htmlWindow";
 import ConsoleNav from "../components/work/consoleNav";

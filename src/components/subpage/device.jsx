@@ -5,7 +5,6 @@ function Device({device}) {
         <div className="deviceArea group flex justify-center items-center gap-3 mt-12">
             {keywords.map((keyword, index) => {
                 if(device[keyword] === true){
-                    
                     if(keyword === "desktop") {
                         return(
                             <div key={index} className="desktop flex flex-col justify-center items-center">
@@ -34,7 +33,7 @@ function Device({device}) {
                         )
                     }else if(keyword === "tablet"){
                         return (
-                        <div key={index} className="tablet flex flex-col justify-center items-center">
+                            <div key={index} className="tablet flex flex-col justify-center items-center">
                             <svg className="w-[44px] opacity-60" fill="#ffefe5" viewBox="0 0 64 64" data-name="Layer 1"
                                 id="Layer_1" xmlns="http://www.w3.org/2000/svg">
                                 <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
@@ -52,7 +51,7 @@ function Device({device}) {
                         )
                     }else if(keyword === "mobile"){
                         return (
-                        <div key={index} className="mobile flex flex-col justify-center items-center">
+                            <div key={index} className="mobile flex flex-col justify-center items-center">
                             <svg className="w-[44px] opacity-60" fill="#ffefe5" viewBox="0 0 64 64" data-name="Layer 1"
                                 id="Layer_1" xmlns="http://www.w3.org/2000/svg">
                                 <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>

@@ -1,5 +1,5 @@
 function BrowserNav({url}) {
-    console.log(url)
+
     return ( <>
         <nav className="header flex justify-center items-center bg-[#e8e8e8] h-[45px] rounded-tl-[5px] rounded-br-[0] rounded-tr-[5px] rounded-bl-[0] pl-[10px] pr-[10px] py-[10px]">
             <ul className="menu w-[70px] flex h-[25px]">

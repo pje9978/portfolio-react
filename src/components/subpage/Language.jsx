@@ -5,10 +5,10 @@ function Language({language}) {
     
     <article className="flex w-1/2 mx-auto mt-12 flex-wrap" >
         <div role="group" aria-label="language" className="container mx-auto w-full flex gap-2 flex-wrap justify-center">
-            {keywords.map((keyword,idex) => {
+            {keywords.map((keyword,index) => {
                 if(language[keyword] === true){
                    return (
-                    <figure role="group" aria-label="language-img" className="w-[44px]">
+                    <figure key={index} role="group" aria-label="language-img" className="w-[44px]">
                             <img src={`${process.env.PUBLIC_URL}/images/stack/stack-${keyword}.png`} alt={keyword} className="w-full" />
                     </figure>
                    );
