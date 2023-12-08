@@ -60,7 +60,7 @@ function SubPage(props) {
                     <Result result={props.data[index].result}/>
                     <span rol="line" aria-label="desc-line" className="inline-block h-1 w-10 rounded bg-white/50 my-12"></span>
                 </article>
-                <Iphone url={props.data[index].url} title={props.data[index].title}/>
+                <Iphone device={props.data[index].device} url={props.data[index].url} title={props.data[index].title}/>
                 <section className="my-12">
                     <header>
                         <h2 className="content__title grid text-center" data-splitting data-effect10>
