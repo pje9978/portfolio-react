@@ -41,8 +41,8 @@ function SubPage(props) {
                         <span className=" rounded px-1 leading-3">Web Publishing</span>
                     </p>
                     <Device device={props.data[index].device}/>
-                    <h2 class="title text-5xl font-semibold mt-6 capitalize">{props.data[index].title}</h2>
-                    <h3 class="subTitle text-sm leading-relaxed w-2/3 mx-auto mt-2">{props.data[index].subTitle}</h3>
+                    <h2 className="title text-5xl font-semibold mt-6 capitalize">{props.data[index].title}</h2>
+                    <h3 className="subTitle text-sm leading-relaxed w-2/3 mx-auto mt-2">{props.data[index].subTitle}</h3>
                    
                 </section>
             
