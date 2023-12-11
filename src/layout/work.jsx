@@ -84,7 +84,7 @@ function Work() {
                                             <EditorNav />
                                             <HtmlWindow title={item.title} subtitle={item.subTitle}/>
                                             <ConsoleNav id={item.id} />
-                                            <ConsoleWindow id={item.id} title={item.title} part={item.part} language={item.language} />
+                                            <ConsoleWindow id={item.id} percent={item.percent} title={item.title} part={item.part} language={item.language} />
                                             <UrlNav id={item.id} index={index} url={item.url} link={item.link} title={item.titile} data={item}/>
                                         </article>
                                     
