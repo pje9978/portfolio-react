@@ -47,7 +47,7 @@ export const gsapAnimate = () => {
       trigger: item,
       start: "center bottom",
       end: "bottom center",
-      markers: true,
+      markers: false,
       onEnter: () => {
         animateItem(item);
       },
