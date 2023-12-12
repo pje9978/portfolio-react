@@ -1,7 +1,14 @@
+import { useEffect } from 'react';
+import { gsapAnimate } from '../script/gsap'
+import {hide,animateItem} from "../script/gsap"
 
 function Strength() {
+    useEffect(()=>{
+        gsapAnimate();
+    },[])
+    
     return ( <>
-            <section id="strength" className="w-screen my-24">
+            <section id="strength" className="reveal reveal_TTB w-screen my-24">
                 <div role="group" aria-label="conainer" className="container relative mx-auto flex flex-col justify-center px-6">
                     <header className="text-center mb-8">
                         <h2 className="content__title grid text-center" data-splitting data-effect10>

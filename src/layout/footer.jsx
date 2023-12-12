@@ -1,6 +1,13 @@
+import { useEffect } from "react";
+import { gsapAnimate } from "../script/gsap";
+
+
 function Footer() {
+    useEffect(()=>{
+        gsapAnimate();
+    },[])
     return ( <>
-        <footer id="contact" className="mt-24">
+        <footer id="contact" className="mt-24 footer reveal_BTT">
             <div className="container mx-auto">
                 <h2 className="content__title md:text-[10vw] font-larger text-[15vw]  opacity-80" data-splitting
                                 data-effect10>Contact.</h2>

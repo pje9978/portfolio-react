@@ -1,29 +1,13 @@
 import { collection, getDocs } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import { db } from "../firebase";
+import { gsapAnimate } from "../script/gsap";
 
 function Gallery() {
 
     const [data, setData] = useState([]);
 
-    useEffect(() => {
-        const fetchData = async () => {
-            const usersCollectionRef = collection(db, 'gallery'); 
-            const userSnap = await getDocs(usersCollectionRef); 
-            const data = userSnap.docs.map(doc => ({
-                ...doc.data(),
-                id: doc.id
-            }));
-            setData(data);
-            // setLoding(false);
-            return data;
-        }
-        console.log(data)
 
-        fetchData();
-        
-    }, []);
-    
     useEffect(()=>{
         
         const demo = document.createElement("script");
@@ -47,12 +31,30 @@ function Gallery() {
         // document.body.appendChild(charming);
         // document.body.appendChild(TweenMax);
         document.body.appendChild(demo);
-        
+        gsapAnimate();
     })
+    useEffect(() => {
+        
+        const fetchData = async () => {
+            const usersCollectionRef = collection(db, 'gallery'); 
+            const userSnap = await getDocs(usersCollectionRef); 
+            const data = userSnap.docs.map(doc => ({
+                ...doc.data(),
+                id: doc.id
+            }));
+            setData(data);
+            
+            // setLoding(false);
+            return data;
+        }
 
+        fetchData();
+        
+    }, []);
+    
     return ( <>
     
-            <section id="gallery" className="mainpage ">
+            <section id="gallery" className="mainpage reveal reveal_RTL">
                 <header className="text-center">
                     <h2 className="content__title md:text-[10vw] font-larger text-[15vw]  opacity-80" data-splitting
                         data-effect10>Gallery.</h2>
@@ -60,7 +62,7 @@ function Gallery() {
                         <span className="text-textwhite opacity-50">A showcase of various graphic design</span>
                     </h3>
                 </header>
-                <div className="slideshow py-24 grid-cols-30">
+                <div className="slideshow  py-24 grid-cols-30">
                     {data.map((item,index) => (
                         <section key={item.id} className="slide container-2xl mx-auto">
                             <figure className="slide__img-wrap">
