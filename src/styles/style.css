@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css");
 .glow-container {
   position: fixed;
   opacity: 0.3;
@@ -670,6 +671,10 @@ section#gallery .slideshow--previewopen .nav--prev {
   animation-iteration-count: 1;
   animation-delay: 2.1s;
 }
+html, body {
+  font-family: "Pretendard-Regular", sans-serif;
+}
+
 .pretendard {
   font-family: "Pretendard-Regular";
 }
