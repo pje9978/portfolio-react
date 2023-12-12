@@ -26,7 +26,7 @@ function Work() {
     
 
     useEffect(() => {
-        gsapAnimate();
+       
         const fetchData = async () => {
             // ... try, catch 생략
             const q = query(collection(db, "database"), orderBy('data', 'desc') );
@@ -46,7 +46,7 @@ function Work() {
             return data;
             });
         }
-
+        gsapAnimate();
         fetchData();
        
     }, []);
@@ -56,7 +56,7 @@ function Work() {
         {loading ? (
             <Loading />
         ) : (
-            <section id="work" className="w-screen my-24 reveal reveal_LTR">
+            <section id="work" className="w-screen my-24 ">
                 <div role="group" aria-label="conainer" className="container md:container-2xl mx-auto flex flex-col justify-center px-6">
                     <header>
                         <h2 className="content__title grid text-center" data-splitting data-effect10>
@@ -68,7 +68,7 @@ function Work() {
                                 some of my latest designs and projects</span>
                         </h3>
                     </header>
-                    <article className="swiper01  w-full relative mt-12">
+                    <article className="reveal reveal_LTR swiper01  w-full relative mt-12">
                         <h2 className="hidden">swiper area</h2>
                         <div role="group" aria-label="swiper conainer" className="swiper-container  h-auto relative  border border-[#e8e5de]/20 rounded-[5px] overflow-hidden">
                             <WindowNav />

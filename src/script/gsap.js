@@ -45,9 +45,9 @@ export const gsapAnimate = () => {
 
     ScrollTrigger.create({
       trigger: item,
-      start: "top 80%",
-      end: "bottom top",
-      markers: false,
+      start: "center bottom",
+      end: "bottom center",
+      markers: true,
       onEnter: () => {
         animateItem(item);
       },

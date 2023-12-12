@@ -54,7 +54,7 @@ function Gallery() {
     
     return ( <>
     
-            <section id="gallery" className="mainpage reveal reveal_RTL">
+            <section id="gallery" className="mainpage ">
                 <header className="text-center">
                     <h2 className="content__title md:text-[10vw] font-larger text-[15vw]  opacity-80" data-splitting
                         data-effect10>Gallery.</h2>
@@ -62,7 +62,7 @@ function Gallery() {
                         <span className="text-textwhite opacity-50">A showcase of various graphic design</span>
                     </h3>
                 </header>
-                <div className="slideshow  py-24 grid-cols-30">
+                <div className="slideshow reveal reveal_RTL py-24 grid-cols-30">
                     {data.map((item,index) => (
                         <section key={item.id} className="slide container-2xl mx-auto">
                             <figure className="slide__img-wrap">

@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { gsapAnimate } from '../script/gsap'
-import {hide,animateItem} from "../script/gsap"
+
 
 function Strength() {
     useEffect(()=>{
@@ -8,7 +8,7 @@ function Strength() {
     },[])
     
     return ( <>
-            <section id="strength" className="reveal reveal_TTB w-screen my-24">
+            <section id="strength" className=" w-screen my-24">
                 <div role="group" aria-label="conainer" className="container relative mx-auto flex flex-col justify-center px-6">
                     <header className="text-center mb-8">
                         <h2 className="content__title grid text-center" data-splitting data-effect10>
@@ -16,7 +16,7 @@ function Strength() {
                         </h2>
                         <a href="https://www.notion.so/GALLUP-5-b1c9b3e695064cf1a51e8175a170877e?pvs=4" className="hover:opacity-100 text-xs opacity-50 p-2 link z-0  text-xs underline  after:content-['_↗']">강점 보고서 자세히 보기</a>
                     </header>
-                    <ul className="relative flex flex-wrap justify-center items-center mt-4">
+                    <ul className="reveal reveal_BTT relative flex flex-wrap justify-center items-center mt-4">
                         <li className="popup-item w-32 flex flex-col  justify-center items-center  aspect-square border border-white/40 hover:border-white/100 hover:text-xl cursor-pointer after:opacity-0">
                             <h4 className="text-xs font-thin tracking-widest">적응력</h4>
                             <h3 className="font-medium">Adaptability</h3>
