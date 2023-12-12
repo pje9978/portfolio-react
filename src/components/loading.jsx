@@ -1,4 +1,4 @@
-import '../styles/loading.scss'
+import '../styles/_loading.scss'
 import BackgroundBall from './bgBall';
 
 function Loading() {
