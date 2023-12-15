@@ -2,11 +2,8 @@ function ConsoleWindow({id,title, language, part, percent}) {
     const keywords = ["html", "css", "scss", "tailwindcss", "javascript", "react", "notion", "photoshop", "illustrator", "GitHub","firebase","figma"];
  
     return ( <>
-        <section key={id} className="work h-[200px] relative  overflow-y-scroll flex flex-col w-full p-4  items-start font-[monospace] text-sm overflow-y-auto overflow-x-hidden">
+        <section key={id} className="work relative  overflow-y-scroll flex flex-col w-full p-4  items-start font-[monospace] text-sm overflow-y-auto overflow-x-hidden">
             <h2 className="hidden">work</h2>
-            <h3 className="before:content-['>'] before:mr-2 opacity-50">title</h3>
-            <h4 className="before:content-['>'] before:mr-2 opacity-100">{title}</h4>
-            
             <h3 className="before:content-['>'] before:mr-2 opacity-50">language</h3>
             <ul className="flex before:content-['>'] before:mr-2 flex-wrap" >
                 {keywords.map((keyword,index) => {

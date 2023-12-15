@@ -716,4 +716,8 @@ html, body {
   background: #333;
   height: 16px;
   width: 16px;
+}
+
+.swiper-slide {
+  height: auto !important;
 }/*# sourceMappingURL=style.css.map */

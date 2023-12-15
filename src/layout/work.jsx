@@ -82,7 +82,7 @@ function Work() {
                                 className="swiper-wrapper container mx-auto sm:max-w-[fit-content] w-full  h-auto  relative bg-bgblack rounded-[5px] ">
                                 {data.map((item, index) => (
                                     <SwiperSlide key={item.id} className="mySwiper h-auto workItem p-4 -pb-0 text-center text-[18px] bg-bgwhite flex flex-wrap border border-[#e8e5de]/20 ">
-                                        <article className="lg:w-1/3 w-full h-[60vh] bg-black flex flex-wrap  items-stretch justify-start rounded-[5px]">
+                                        <article className="lg:w-1/3 w-full min-h-[60vh] bg-black flex flex-wrap  items-stretch justify-start rounded-[5px]">
                                             <h2 className="hidden">editor</h2>
                                             <EditorNav />
                                             <HtmlWindow title={item.title} subtitle={item.subTitle}/>
@@ -91,11 +91,11 @@ function Work() {
                                             <UrlNav id={item.id} index={index} url={item.url} link={item.link} title={item.titile} data={item}/>
                                         </article>
                                     
-                                        <article className="lg:w-2/3 w-full h-[60vh] rounded-[5px] overflow-hidden">
+                                        <article className="lg:w-2/3 w-full  h-[530px] rounded-[5px] overflow-hidden">
                                             <h2 className="hidden">project image</h2>
                                             <div className="[box-shadow:0px_2px_3px_0px_rgba(50,_50,_50,_0.11)] border-[1px] border-[solid]  border-[#c3c3c3] w-full  rounded-[5px] relative h-full">
                                                 <BrowserNav url={item.url}/>
-                                                <figure className="window w-full h-fit overflow-y-scroll scale-100 rounded-tl-[0] rounded-br-[5px] rounded-tr-[0] rounded-bl-[5px]">
+                                                <figure classNam e="window w-full h-fit overflow-y-scroll scale-100 rounded-tl-[0] rounded-br-[5px] rounded-tr-[0] rounded-bl-[5px]">
                                                     <img src={`${process.env.PUBLIC_URL}/images/capture/${item.title}/desktop1.png`} className="w-full border-[0] ml-[0] mr-[0] my-[0]"  alt="desktop"></img>
                                                 </figure>
                                             </div>
